@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{362A2F44-1297-400F-8254-20CE9D88EB63}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntityFrameworkDemo</RootNamespace>
+    <AssemblyName>EntityFrameworkDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseNomEntity.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="HrContext\HrContext.cs" />
+    <Compile Include="Migrations\201607080625501_InitialMigration.cs" />
+    <Compile Include="Migrations\201607080625501_InitialMigration.Designer.cs">
+      <DependentUpon>201607080625501_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607080640158_AddCustomConventions.cs" />
+    <Compile Include="Migrations\201607080640158_AddCustomConventions.Designer.cs">
+      <DependentUpon>201607080640158_AddCustomConventions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607080651006_YMCA.cs" />
+    <Compile Include="Migrations\201607080651006_YMCA.Designer.cs">
+      <DependentUpon>201607080651006_YMCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607080708372_NewDatabase.cs" />
+    <Compile Include="Migrations\201607080708372_NewDatabase.Designer.cs">
+      <DependentUpon>201607080708372_NewDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607080723209_AddUniqueMailKey.cs" />
+    <Compile Include="Migrations\201607080723209_AddUniqueMailKey.Designer.cs">
+      <DependentUpon>201607080723209_AddUniqueMailKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607080808559_EmployeeModel.cs" />
+    <Compile Include="Migrations\201607080808559_EmployeeModel.Designer.cs">
+      <DependentUpon>201607080808559_EmployeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607110444278_Numaistiuceamfacut.cs" />
+    <Compile Include="Migrations\201607110444278_Numaistiuceamfacut.Designer.cs">
+      <DependentUpon>201607110444278_Numaistiuceamfacut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607110452496_AddGenderTable.cs" />
+    <Compile Include="Migrations\201607110452496_AddGenderTable.Designer.cs">
+      <DependentUpon>201607110452496_AddGenderTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607110459059_AnotherMigration.cs" />
+    <Compile Include="Migrations\201607110459059_AnotherMigration.Designer.cs">
+      <DependentUpon>201607110459059_AnotherMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607110523058_Seed.cs" />
+    <Compile Include="Migrations\201607110523058_Seed.Designer.cs">
+      <DependentUpon>201607110523058_Seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607111907243_AddProject.cs" />
+    <Compile Include="Migrations\201607111907243_AddProject.Designer.cs">
+      <DependentUpon>201607111907243_AddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607111920030_AddManyToManyFk.cs" />
+    <Compile Include="Migrations\201607111920030_AddManyToManyFk.Designer.cs">
+      <DependentUpon>201607111920030_AddManyToManyFk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607111929594_AddRowVersion.cs" />
+    <Compile Include="Migrations\201607111929594_AddRowVersion.Designer.cs">
+      <DependentUpon>201607111929594_AddRowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607111939054_CreateProcedureChangeManager.cs" />
+    <Compile Include="Migrations\201607111939054_CreateProcedureChangeManager.Designer.cs">
+      <DependentUpon>201607111939054_CreateProcedureChangeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607112007292_CompleteProcedureChangeManager.cs" />
+    <Compile Include="Migrations\201607112007292_CompleteProcedureChangeManager.Designer.cs">
+      <DependentUpon>201607112007292_CompleteProcedureChangeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607112025476_CorrectProcedure3.cs" />
+    <Compile Include="Migrations\201607112025476_CorrectProcedure3.Designer.cs">
+      <DependentUpon>201607112025476_CorrectProcedure3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Job.cs" />
+    <Compile Include="Model\Location.cs" />
+    <Compile Include="Model\Nomenclatores\Gender.cs" />
+    <Compile Include="Model\Nomenclatores\Level.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607080625501_InitialMigration.resx">
+      <DependentUpon>201607080625501_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607080640158_AddCustomConventions.resx">
+      <DependentUpon>201607080640158_AddCustomConventions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607080651006_YMCA.resx">
+      <DependentUpon>201607080651006_YMCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607080708372_NewDatabase.resx">
+      <DependentUpon>201607080708372_NewDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607080723209_AddUniqueMailKey.resx">
+      <DependentUpon>201607080723209_AddUniqueMailKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607080808559_EmployeeModel.resx">
+      <DependentUpon>201607080808559_EmployeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607110444278_Numaistiuceamfacut.resx">
+      <DependentUpon>201607110444278_Numaistiuceamfacut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607110452496_AddGenderTable.resx">
+      <DependentUpon>201607110452496_AddGenderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607110459059_AnotherMigration.resx">
+      <DependentUpon>201607110459059_AnotherMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607110523058_Seed.resx">
+      <DependentUpon>201607110523058_Seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607111907243_AddProject.resx">
+      <DependentUpon>201607111907243_AddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607111920030_AddManyToManyFk.resx">
+      <DependentUpon>201607111920030_AddManyToManyFk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607111929594_AddRowVersion.resx">
+      <DependentUpon>201607111929594_AddRowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607111939054_CreateProcedureChangeManager.resx">
+      <DependentUpon>201607111939054_CreateProcedureChangeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607112007292_CompleteProcedureChangeManager.resx">
+      <DependentUpon>201607112007292_CompleteProcedureChangeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607112025476_CorrectProcedure3.resx">
+      <DependentUpon>201607112025476_CorrectProcedure3.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
